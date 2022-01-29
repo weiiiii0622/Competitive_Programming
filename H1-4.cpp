@@ -7,28 +7,24 @@ int main(){
 
     int n, x;
     cin >> n >> x;
-    long long ans=0, sum[n];
-    cin >> sum[0];
+    long long ans=0, num[n];
+    cin >> num[0];
     for(int i=1; i<n; i++){
-        cin >> sum[i];
-        sum[i] += sum[i-1];
+        cin >> num[i];
     }
 
-    for(int i=-1; i<n; i++){
-        for(int j=i+1; j<n; j++){
-            if(i == -1){
-                if(sum[j] == x){
-                    ans++;
-                    break;
-                }
+    long long sum=0;
+    int r=0, l=0;
+    while(r<n){
+        sum += num[r];
+        while (sum >= x){
+            if(sum == x){
+                ans++;
             }
-            else{
-                if(sum[j]-sum[i] == x){
-                    ans++;
-                    break;
-                }
-            }
+            sum -= num[l];
+            l++;
         }
+        r++;
     }
 
     cout << ans << '\n';

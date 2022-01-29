@@ -7,12 +7,10 @@ void get_prime(){
     NotPrime[0] = true;
     NotPrime[1] = true;
 
-    for(int i=2; i<=1000004; i++){
+    for(long long i=2; i<=1000004; i++){
         if(!NotPrime[i]){
-            for(int k=1000004/i, j=i*k; k>=i; k--, j-=i){
-                if(!NotPrime[k]){
-                    NotPrime[j] = true;
-                }
+            for(long long j=i*i; j<=1000004; j+=i){
+                NotPrime[j] = true;
             }
         }
     }
@@ -53,7 +51,7 @@ int main(){
                         break;
                     }
                 }
-                ans += (left+1)*(right+1)-1;
+                ans += 1ll *(left+1)*(right+1)-1;
             }
         }
         cout << ans << '\n';
