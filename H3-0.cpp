@@ -15,7 +15,7 @@ int main(){
     reverse['A']='A';reverse['E']='3';reverse['H']='H';reverse['I']='I';reverse['J']='L';reverse['L']='J';
     reverse['M']='M';reverse['O']='O';reverse['S']='2';reverse['T']='T';reverse['U']='U';reverse['V']='V';reverse['W']='W';reverse['X']='X';
     reverse['Y']='Y';reverse['Z']='5';reverse['1']='1';reverse['2']='S';reverse['3']='E';reverse['5']='Z';reverse['8']='8';
-
+ 
     string str;
     while(cin >> str){
         int i=0, j=str.length()-1;

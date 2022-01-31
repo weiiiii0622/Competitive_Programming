@@ -8,7 +8,7 @@ using namespace std;
 int main(){
     ios::sync_with_stdio(false);
     cin.tie(0);
-
+ 
     int n, f, count=0;
     while(cin >> n >> f){
         count++;
